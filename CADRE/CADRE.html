@@ -4700,65 +4700,443 @@ var audio = SimpleAudio.tracks.get(&quot;paco&quot;);
 audio.audio.addEventListener(&quot;ended&quot;, function () {
     SugarCube.Engine.play(&quot;Stop music&quot;);
 });
-&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="read" tags="daytime nobr reading" position="425,500" size="100,100">&lt;&lt;pageflip&gt;&gt;
+&lt;&lt;/script&gt;&gt;</tw-passagedata><tw-passagedata pid="80" name="read" tags="daytime nobr reading" position="425,500" size="100,100">&lt;&lt;set $mindspacereturn to passage()&gt;&gt;
+&lt;&lt;set_tvshow&gt;&gt;
 
+&lt;&lt;if $tvshow is &quot;The Slow and the Living&quot; or $tvshow is &quot;Colm Whitley: Renegade Horseman&quot; or $tvshow is &quot;Plains Rambler&quot;&gt;&gt;
 
-&lt;br&gt;
+    &lt;&lt;audio &quot;westernsfx&quot; volume .5&gt;&gt;
+    &lt;&lt;audio &quot;westernsfx&quot; fadeoverto 2 0&gt;&gt;
 
-&lt;div class=&quot;tv-desc&quot;&gt;&lt;&lt;reading_desc&gt;&gt;&lt;/div&gt;
-&lt;br&gt;
-&lt;&lt;if _readamount lt 6&gt;&gt;
-&lt;&lt;link &quot;keep reading&quot; &quot;read&quot;&gt;&gt;
+&lt;&lt;elseif $tvshow is &quot;Buckaroo Bunkhouse&quot;&gt;&gt;
 
-&lt;&lt;if $currentreading is &quot;classicnovel&quot;&gt;&gt;
-	&lt;&lt;set $classicnovel_readamount = Math.min(6, $classicnovel_readamount + 1)&gt;&gt;
-&lt;&lt;elseif $currentreading is &quot;pulpnovel&quot;&gt;&gt;
-	&lt;&lt;set $pulpnovel_readamount = Math.min(6, $pulpnovel_readamount + 1)&gt;&gt;
-&lt;&lt;elseif $currentreading is &quot;revolutionarylit&quot;&gt;&gt;
-	&lt;&lt;set $revolutionarylit_readamount = Math.min(6, $revolutionarylit_readamount + 1)&gt;&gt;
+    &lt;&lt;if $time is 20&gt;&gt;
+
+        &lt;&lt;audio &quot;shooting1&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;shooting1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;elseif $time is 50&gt;&gt;
+
+        &lt;&lt;audio &quot;singingintro&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;singingintro&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;else&gt;&gt;
+
+        &lt;&lt;audio &quot;westernsfx&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;westernsfx&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;OFF AIR&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;static&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;static&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Horas em Segundos&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 0&gt;&gt;
+
+    &lt;&lt;audio &quot;soap1&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;soap1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;elseif $time is 20&gt;&gt;
+
+        &lt;&lt;audio &quot;tvgibberish&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;tvgibberish&quot; fadeoverto 2 0&gt;&gt;
+
+        &lt;&lt;else&gt;&gt;
+
+        &lt;&lt;audio &quot;soap1&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;soap1&quot; fadeoverto 2 0&gt;&gt;
+
+        &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Sen Vealde&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 60&gt;&gt;
+
+        &lt;&lt;audio &quot;soapmusicintro1&quot; volume .7&gt;&gt;
+        &lt;&lt;audio &quot;soapmusicintro1&quot; fadeoverto 4 0&gt;&gt;
+
+    &lt;&lt;else&gt;&gt;
+        &lt;&lt;audio &quot;soap1&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;soap1&quot; fadeoverto 2 0&gt;&gt;
+    
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Kaza de Myranda&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 240&gt;&gt;
+
+        &lt;&lt;audio &quot;fsoap1&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;fsoap1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;elseif $time is 250&gt;&gt;
+
+        &lt;&lt;audio &quot;soapannouncer2&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;soapannouncer2&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;else&gt;&gt;
+
+    &lt;&lt;audio &quot;soapargument1&quot; volume .5&gt;&gt;
+    &lt;&lt;audio &quot;soapargument1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Locurazau&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;childrensvoices&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;childrensvoices&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Tree People&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;tvgibberish&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;tvgibberish&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Weather report and announcements&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 240 and not $muzakplayed&gt;&gt;
+        &lt;&lt;audio &quot;muzak&quot; volume 0.1 play&gt;&gt;
+        &lt;&lt;set $muzakplayed = true&gt;&gt;
+    
+    &lt;&lt;else&gt;&gt;
+        
+        &lt;&lt;audio &quot;tone8&quot; volume 0.1 play&gt;&gt;
+    
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Emergency systems test&quot;&gt;&gt;
+
+  &lt;&lt;audio &quot;emergencytest&quot; volume .5 play&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;The Comedy Entertainment Hour&quot; or $tvshow is &quot;Mocking Heads&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 330&gt;&gt;
+
+        &lt;&lt;audio &quot;jauntyminorhorns&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;jauntyminorhorns&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;else&gt;&gt;
+
+        &lt;&lt;audio &quot;comedyshow1&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;comedyshow1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;The After After Dinner Show&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 510&gt;&gt;
+
+    &lt;&lt;audio &quot;ascendingscale&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;ascendingscale fadeoverto 3 0&quot;&gt;&gt;
+
+    &lt;&lt;else&gt;&gt;
+
+    &lt;&lt;audio &quot;comedyshow2&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;comedyshow2&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Kadzastrov Medikal&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;news1&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;news1&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Docks of Doggerel&quot;&gt;&gt;
+
+        &lt;&lt;audio &quot;westernsfx&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;westernsfx fadeoverto 2 0&quot;&gt;&gt;
+    
+&lt;&lt;elseif $tvshow is &quot;Akwafon a Noitze&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;newssfx1&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;newssfx1&quot; fadeoverto 2 0&gt;&gt;
+    
+&lt;&lt;elseif $tvshow is &quot;Dias Soldados&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;spanishtalking&quot; volume .3&gt;&gt;
+    &lt;&lt;audio &quot;spanishtalking&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Tão Marrom Era Minha Finca&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 120&gt;&gt;
+
+    &lt;&lt;audio &quot;fsoap1&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;fsoap1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;else&gt;&gt;
+
+    &lt;&lt;audio &quot;spanishtalking&quot; volume .3&gt;&gt;
+    &lt;&lt;audio &quot;spanishtalking&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Destination: Tomorrow&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 120&gt;&gt;
+
+        &lt;&lt;audio &quot;scifiintro&quot; volume .8&gt;&gt;
+        &lt;&lt;audio &quot;scifiintro&quot; fadeoverto 4 0&gt;&gt;
+
+    &lt;&lt;else&gt;&gt; 
+
+        &lt;&lt;audio &quot;clarkenarration&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;clarkenarration&quot; fadeoverto 2 0&gt;&gt;
+    
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;National Fair Preparations&quot; or $tvshow is &quot;Constant Current&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;newssfx1&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;newssfx1&quot; fadeoverto 2 0&gt;&gt;
+    
+&lt;&lt;elseif $tvshow is &quot;Alert Tallahassee&quot; or $tvshow is &quot;Visopo RSP&quot; or $tvshow is &quot;Visopo RSP 2&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;dangerman1&quot; volume 1.5&gt;&gt;
+    &lt;&lt;audio &quot;dangerman1&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Joanna de Arcus&quot; or $tvshow is &quot;Sarai Voltano Invykta&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;fnews1&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;fnews1&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;The National Report&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 180&gt;&gt;
+
+        &lt;&lt;audio &quot;newshornintro&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;newshornintro&quot; fadeoverto 2 0&gt;&gt;
+    
+    &lt;&lt;else&gt;&gt;
+
+        &lt;&lt;audio &quot;news1&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;news1&quot; fadeoverto 2 0&gt;&gt;
+    
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Deve de Iustyze&quot; or $tvshow is &quot;Preguint Divyxe&quot; or $tvshow is &quot;What Would John the Baptist Do?&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;news2&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;news2&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;elseif $tvshows is &quot;Nevez report&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;mnews1&quot; volume .5&gt;&gt;
+    &lt;&lt;audio &quot;mnews1&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;The Lystran Royal Orchestra Hour&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 240&gt;&gt;
+
+        &lt;&lt;audio &quot;kingswedding&quot; volume .3&gt;&gt;
+        &lt;&lt;audio &quot;kingswedding&quot; fadeoverto 4 0&gt;&gt;
+
+    &lt;&lt;elseif $time is 250&gt;&gt;
+
+        &lt;&lt;audio &quot;kingswedding2&quot; volume .3&gt;&gt;
+        &lt;&lt;audio &quot;kingswedding2&quot; fadeoverto 4 0&gt;&gt;
+    
+    &lt;&lt;elseif $time is 260&gt;&gt;
+    
+        &lt;&lt;audio &quot;mnews1&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;mnews1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;elseif $time is 270&gt;&gt;
+    
+        &lt;&lt;audio &quot;creepystrings&quot; volume .3&gt;&gt;
+        &lt;&lt;audio &quot;creepystrings&quot; fadeoverto 4 0&gt;&gt;
+
+    &lt;&lt;elseif $time is 280&gt;&gt;
+
+        &lt;&lt;audio &quot;laley&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;laley&quot; fadeoverto 4 0&gt;&gt;
+
+    &lt;&lt;else&gt;&gt;
+
+        &lt;&lt;audio &quot;satansentrance&quot; volume .3&gt;&gt;
+        &lt;&lt;audio &quot;satansentrance&quot; fadeoverto 4 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Vespers with Queen Amavilya and Bishop Armon&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 420&gt;&gt;
+
+        &lt;&lt;audio &quot;gloria&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;gloria&quot; fadeoverto 2 0&gt;&gt;
+    
+    &lt;&lt;else&gt;&gt;
+
+        &lt;&lt;audio &quot;newssfx1&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;newssfx1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Pazka Pazat&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 300 or $time is 310&gt;&gt;
+
+        &lt;&lt;audio &quot;catholicmass&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;catholicmass&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;elseif $time is 330&gt;&gt;
+
+        &lt;&lt;audio &quot;jauntyhorn1&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;jauntyhorn1&quot; fadeoverto 2 0&gt;&gt;
+    
+    &lt;&lt;else&gt;&gt;
+
+        &lt;&lt;audio &quot;newssfx1&quot; volume 1&gt;&gt;
+        &lt;&lt;audio &quot;newssfx1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Donaghy&quot; or $tvshow is &quot;Connie and Ax&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 330&gt;&gt;
+
+        &lt;&lt;audio &quot;lqhorns&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;lqhorns&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;else&gt;&gt;
+
+    &lt;&lt;audio &quot;fight1&quot; volume 1&gt;&gt;
+    &lt;&lt;audio &quot;fight1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;Contract: Negociable&quot;&gt;&gt;
+
+    &lt;&lt;if $time is 300&gt;&gt;
+
+        &lt;&lt;audio &quot;spyintromusic&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;spyintromusic&quot; fadeoverto 4 0&gt;&gt;
+
+    &lt;&lt;elseif $time is 350&gt;&gt;
+
+        &lt;&lt;audio &quot;fight1&quot; volume .5&gt;&gt;
+        &lt;&lt;audio &quot;fight1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;else&gt;&gt;
+
+        &lt;&lt;audio &quot;dangerman1&quot; volume 1.5&gt;&gt;
+        &lt;&lt;audio &quot;dangerman1&quot; fadeoverto 2 0&gt;&gt;
+
+    &lt;&lt;/if&gt;&gt;
+
+&lt;&lt;elseif $tvshow is &quot;The Fabulous Adventures of Tyrus Rhys&quot; or $tvshow is &quot;Termite Turtle, Salmon Squirrel&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;dangerman1&quot; volume 1.5&gt;&gt;
+    &lt;&lt;audio &quot;dangerman1&quot; fadeoverto 2 0&gt;&gt;
+	
+&lt;&lt;elseif $tvshow is &quot;LAGOSTAMULHER&quot;&gt;&gt;
+
+    &lt;&lt;audio &quot;horrorsfx&quot; volume .5&gt;&gt;
+    &lt;&lt;audio &quot;horrorsfx&quot; fadeoverto 2 0&gt;&gt;
+
+&lt;&lt;else&gt;&gt;
+
+&lt;&lt;audio &quot;tvgibberish&quot; volume 1&gt;&gt;
+&lt;&lt;audio &quot;tvgibberish&quot; fadeoverto 2 0&gt;&gt;
+
 &lt;&lt;/if&gt;&gt;
 
-	&lt;&lt;advance_booktime&gt;&gt;
+&lt;br&gt;
+&lt;div class=&quot;tv-desc&quot;&gt;&lt;&lt;tv_desc&gt;&gt;&lt;/div&gt;
 
+&lt;br&gt;
+&lt;&lt;if $tvchannel is 3 and $time is 230&gt;&gt;
+
+&lt;&lt;link &quot;keep watching&quot;&gt;&gt;
+        &lt;&lt;goto &quot;Nevez report&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;br&gt;
+
+&lt;&lt;else&gt;&gt;
+
+&lt;&lt;link &quot;keep watching&quot;&gt;&gt;
+    &lt;&lt;advance_time&gt;&gt;
+    &lt;&lt;audio &quot;emergencytest&quot; stop&gt;&gt; 
+        &lt;&lt;goto &quot;watch tv&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt;&lt;br&gt;
+
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;linkreplace &quot;change channel&quot;&gt;&gt;&lt;&lt;audio &quot;tvchannelclick&quot; play&gt;&gt;
+&lt;span style=&quot;font-size: 110%&quot;&gt;change channel&lt;/span&gt;
+
+&lt;&lt;if $tvchannel != 1&gt;&gt;
+&lt;&lt;link &quot;1&quot;&gt;&gt;
+&lt;&lt;advance_time&gt;&gt;
+&lt;&lt;audio &quot;channelknob&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;tvsharpstatic&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;muzak&quot; stop&gt;&gt;
+    &lt;&lt;audio &quot;emergencytest&quot; stop&gt;&gt; 
+    &lt;&lt;set $tvchannel = 1&gt;&gt;
+    &lt;&lt;goto &quot;watch tv&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if _readamount is 6&gt;&gt;
-
-&lt;&lt;link &quot;read again&quot; &quot;read&quot;&gt;&gt;
-	&lt;&lt;if $currentreading is &quot;classicnovel&quot;&gt;&gt;
-		&lt;&lt;set $classicnovel_readamount = 0&gt;&gt;
-	&lt;&lt;elseif $currentreading is &quot;pulpnovel&quot;&gt;&gt;
-		&lt;&lt;set $pulpnovel_readamount = 0&gt;&gt;
-	&lt;&lt;elseif $currentreading is &quot;revolutionarylit&quot;&gt;&gt;
-		&lt;&lt;set $revolutionarylit_readamount = 0&gt;&gt;
-	&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $tvchannel != 2&gt;&gt;
+&lt;&lt;link &quot;2&quot;&gt;&gt;
+&lt;&lt;advance_time&gt;&gt;
+&lt;&lt;audio &quot;channelknob&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;tvsharpstatic&quot; play&gt;&gt;
+    &lt;&lt;set $tvchannel = 2&gt;&gt;
+    &lt;&lt;goto &quot;watch tv&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
-
-&lt;&lt;if _readamount gt 0&gt;&gt;
-&lt;&lt;link &quot;go back&quot; &quot;read&quot;&gt;&gt;
-	&lt;&lt;if $currentreading is &quot;classicnovel&quot;&gt;&gt;
-		&lt;&lt;set $classicnovel_readamount = Math.max(0, $classicnovel_readamount - 1)&gt;&gt;
-	&lt;&lt;elseif $currentreading is &quot;pulpnovel&quot;&gt;&gt;
-		&lt;&lt;set $pulpnovel_readamount = Math.max(0, $pulpnovel_readamount - 1)&gt;&gt;
-	&lt;&lt;elseif $currentreading is &quot;revolutionarylit&quot;&gt;&gt;
-		&lt;&lt;set $revolutionarylit_readamount = Math.max(0, $revolutionarylit_readamount - 1)&gt;&gt;
-	&lt;&lt;/if&gt;&gt;
-  
-
-	&lt;&lt;advance_booktime&gt;&gt;
+&lt;&lt;if $tvchannel != 3&gt;&gt;
+&lt;&lt;link &quot;3&quot;&gt;&gt;
+&lt;&lt;advance_time&gt;&gt;
+&lt;&lt;audio &quot;channelknob&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;tvsharpstatic&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;muzak&quot; stop&gt;&gt;
+    &lt;&lt;audio &quot;emergencytest&quot; stop&gt;&gt; 
+    &lt;&lt;set $tvchannel = 3&gt;&gt;
+    &lt;&lt;goto &quot;watch tv&quot;&gt;&gt;
 &lt;&lt;/link&gt;&gt;
-&lt;br&gt;
 &lt;&lt;/if&gt;&gt;
 
+&lt;&lt;if $tvchannel != 5&gt;&gt;
+&lt;&lt;link &quot;5&quot;&gt;&gt;
+&lt;&lt;advance_time&gt;&gt;
+&lt;&lt;audio &quot;channelknob&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;tvsharpstatic&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;muzak&quot; stop&gt;&gt;
+    &lt;&lt;audio &quot;emergencytest&quot; stop&gt;&gt; 
+    &lt;&lt;set $tvchannel = 5&gt;&gt;
+    &lt;&lt;goto &quot;watch tv&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 
+&lt;&lt;if $tvchannel != 6&gt;&gt;
+&lt;&lt;link &quot;6&quot;&gt;&gt;
+&lt;&lt;advance_time&gt;&gt;
+&lt;&lt;audio &quot;channelknob&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;tvsharpstatic&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;muzak&quot; stop&gt;&gt;
+    &lt;&lt;audio &quot;emergencytest&quot; stop&gt;&gt; 
+    &lt;&lt;set $tvchannel = 6&gt;&gt;
+    &lt;&lt;goto &quot;watch tv&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 
-[[read something else|book selection]]&lt;br&gt;
-[[watch tv]]&lt;br&gt;
+&lt;&lt;if $tvchannel != 7&gt;&gt;
+&lt;&lt;link &quot;7&quot;&gt;&gt;
+&lt;&lt;advance_time&gt;&gt;
+&lt;&lt;audio &quot;channelknob&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;tvsharpstatic&quot; play&gt;&gt;
+    &lt;&lt;audio &quot;muzak&quot; stop&gt;&gt;
+    &lt;&lt;audio &quot;emergencytest&quot; stop&gt;&gt; 
+    &lt;&lt;set $tvchannel = 7&gt;&gt;
+    &lt;&lt;goto &quot;watch tv&quot;&gt;&gt;
+&lt;&lt;/link&gt;&gt;
+&lt;&lt;/if&gt;&gt;
+
+&lt;&lt;/linkreplace&gt;&gt;
+&lt;br&gt;
+&lt;&lt;if $reading&gt;&gt;[[read|book selection]]&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
 &lt;&lt;if $dreaming&gt;&gt;[[sleep]]&lt;&lt;/if&gt;&gt;
 </tw-passagedata><tw-passagedata pid="81" name="reading_desc widget" tags="widget nobr" position="1800,200" size="100,100">&lt;&lt;widget reading_desc&gt;&gt;
