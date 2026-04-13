@@ -933,7 +933,7 @@ $(document).on('mousedown', '.link-internal, #ui-bar a, #ui-bar button', functio
 &lt;br&gt;
 &lt;&lt;link &quot;&lt;span class=&#39;music-link&#39;&gt;play music&lt;/span&gt;&quot; &quot;Play music&quot;&gt;&gt;
     &lt;&lt;audio &quot;paco&quot; volume .4 play&gt;&gt;
-&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="1100,100" size="100,100">&lt;&lt;set $time to -10&gt;&gt;
+&lt;&lt;/link&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="StoryInit" tags="" position="1075,100" size="100,100">&lt;&lt;set $time to -10&gt;&gt;
 &lt;&lt;set $tvchannel to 3&gt;&gt;
 
 &lt;&lt;set $reading to false&gt;&gt;
@@ -1062,7 +1062,7 @@ $(document).on('mousedown', '.link-internal, #ui-bar a, #ui-bar button', functio
 &lt;&lt;cacheaudio &quot;soapannouncer2&quot; &quot;audio/soapannouncer2.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;soapargument1&quot; &quot;audio/soapargument1.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;static&quot; &quot;audio/static.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;ascendingscale&quot; &quot;audio/static.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;ascendingscale&quot; &quot;audio/ascendingscale.mp3&quot;&gt;&gt;
 
 
 
@@ -2182,7 +2182,7 @@ SPECIFIC ADVISORY INFORMATION&lt;br&gt;&quot;,
     &lt;&lt;if $time is 510&gt;&gt;
 
     &lt;&lt;audio &quot;ascendingscale&quot; volume 1&gt;&gt;
-    &lt;&lt;audio &quot;ascendingscale fadeoverto 3 0&quot;&gt;&gt;
+    &lt;&lt;audio &quot;ascendingscale&quot; fadeoverto 3 0&gt;&gt;
 
     &lt;&lt;else&gt;&gt;
 
@@ -2268,7 +2268,7 @@ SPECIFIC ADVISORY INFORMATION&lt;br&gt;&quot;,
     &lt;&lt;audio &quot;news2&quot; volume 1&gt;&gt;
     &lt;&lt;audio &quot;news2&quot; fadeoverto 2 0&gt;&gt;
 
-&lt;&lt;elseif $tvshows is &quot;Nevez report&quot;&gt;&gt;
+&lt;&lt;elseif $tvshow is &quot;Nevez report&quot;&gt;&gt;
 
     &lt;&lt;audio &quot;mnews1&quot; volume .5&gt;&gt;
     &lt;&lt;audio &quot;mnews1&quot; fadeoverto 2 0&gt;&gt;
@@ -2487,7 +2487,9 @@ SPECIFIC ADVISORY INFORMATION&lt;br&gt;&quot;,
 &lt;br&gt;
 &lt;&lt;if $reading&gt;&gt;[[read|book selection]]&lt;br&gt;&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if $dreaming&gt;&gt;[[sleep]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="tv show schedule widget" tags="widget nobr" position="1600,100" size="100,100">&lt;&lt;widget set_tvshow&gt;&gt;
+&lt;&lt;if $dreaming&gt;&gt;[[sleep]]&lt;&lt;/if&gt;&gt;
+
+$time</tw-passagedata><tw-passagedata pid="5" name="tv show schedule widget" tags="widget nobr" position="1600,100" size="100,100">&lt;&lt;widget set_tvshow&gt;&gt;
 &lt;&lt;set $tvshow to &quot;&quot;&gt;&gt;
 
 &lt;&lt;if $tvchannel == 1&gt;&gt;
