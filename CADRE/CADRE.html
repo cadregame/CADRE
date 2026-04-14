@@ -876,14 +876,14 @@ Setting.addList("optionspeed", {
 /* COLOR SCHEMES */
 
 var applyColorScheme = function applyColorScheme() {
-    /* cache the jQuery-wrapped <html> element */
+
     var $html = $("html");
 
-    /* remove any existing scheme related classes */
+ 
     $html.removeClass("scheme-orange-and-green scheme-noir scheme-dossier scheme-blueprint");
-    /* note: the above can be shortened to $html.removeClass() if no other classes will be assigned to <html> */
 
-    /* add the correct scheme related class */
+
+   
     $html.addClass("scheme-" + settings.colorscheme.replace(/\s+/g, "-"));
 
 };
@@ -893,7 +893,7 @@ Setting.addList("colorscheme", {
     list     : ["orange and green", "noir"],
     onInit   : applyColorScheme,
     onChange : applyColorScheme
-}); /* default value not defined, so the first array member "orange and green" is used */
+}); 
 
 
 /* OPTION WARNING */
@@ -1720,7 +1720,7 @@ SPECIFIC ADVISORY INFORMATION&lt;br&gt;&quot;,
     &quot;Shortly after arriving on the island Tyrus is drugged and awakes inside a tiger enclosure, dispatching them with the poison syringe hidden in his nasal cavity. &quot;,
     &quot;Tyrus passes out from his injuries and awakes again, bandaged and in the harem of the missing opera singer. &quot;, 
     &quot;The opera singer explains that she leads an international crime ring, and Tyrus seduces her into loosening his chains. &quot;,
-    &quot;Tyrus and the opera singer fighter, and just before she stabs him his loyal assistant Honeybunch appears and helpfully shoots her in the back. &quot;
+    &quot;Tyrus and the opera singer fight, and just before she stabs him his loyal assistant Honeybunch appears and helpfully shoots her in the back. &quot;
 
     ][$tvshowprogress]&gt;&gt;
 
@@ -2150,7 +2150,7 @@ SPECIFIC ADVISORY INFORMATION&lt;br&gt;&quot;,
 &lt;&lt;elseif $tvshow is &quot;Weather report and announcements&quot;&gt;&gt;
 
     &lt;&lt;if $time is 240 and not $muzakplayed&gt;&gt;
-        &lt;&lt;audio &quot;muzak&quot; volume 0.1 play&gt;&gt;
+        &lt;&lt;audio &quot;muzak&quot; volume 0.2 play&gt;&gt;
         &lt;&lt;set $muzakplayed = true&gt;&gt;
     
     &lt;&lt;else&gt;&gt;
@@ -2161,7 +2161,7 @@ SPECIFIC ADVISORY INFORMATION&lt;br&gt;&quot;,
 
 &lt;&lt;elseif $tvshow is &quot;Emergency systems test&quot;&gt;&gt;
 
-  &lt;&lt;audio &quot;emergencytest&quot; volume 1 play&gt;&gt;
+  &lt;&lt;audio &quot;emergencytest&quot; volume .7 play&gt;&gt;
 
 &lt;&lt;elseif $tvshow is &quot;The Comedy Entertainment Hour&quot; or $tvshow is &quot;Mocking Heads&quot;&gt;&gt;
 
@@ -4186,7 +4186,7 @@ __Connections__: unknown&lt;br&gt;
 __Affiliations__: [[Cadre]]&lt;br&gt;
 &lt;br&gt;
 __Physical__: brunette, shoulder-length straight hair, brown eyes, olive skin, ~165cm, thin, high cheekbones, sunken eyes&lt;br&gt;
-__Accoutrements__: round horn-rimmed glasses, wedding band, small gold cross necklace
+__Accoutrements__: round horn-rimmed glasses, wedding band, small gold cross necklace&lt;br&gt;
 __Last seen__: in a white labcoat and khaki trousers at her [[clinic|medical clinic]].&lt;br&gt;
 &lt;br&gt;
 __Preferences__: unknown&lt;br&gt;
@@ -4912,7 +4912,7 @@ audio.audio.addEventListener(&quot;ended&quot;, function () {
 [[think about nothing|dream 1]]&lt;br&gt;
 </tw-passagedata><tw-passagedata pid="88" name="dream 1" tags="nobr daytime" position="300,1100" size="100,100">&lt;br&gt;
 &lt;br&gt;
-lazlo.valkrani@gmail.com&lt;br&gt;
+ablereason@protonmail.com&lt;br&gt;
 &lt;br&gt;
 &lt;span class=&#39;music-link&#39;&gt;Non habui tempus timendi.&lt;/span&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
